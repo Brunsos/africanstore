@@ -16,40 +16,50 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;color:var(--text);background:var(--gray-50);overflow-x:hidden}
+
+/* ACCESSIBILITY */
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.icon{width:1em;height:1em;display:inline-block;vertical-align:-0.125em;fill:currentColor;flex-shrink:0}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
 header{background:var(--black);border-bottom:3px solid var(--green);position:sticky;top:0;z-index:200}
 .header-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .logo-wrap{display:flex;flex-direction:column;line-height:1;text-decoration:none}
 .logo-ccio{font-family:'Oswald',sans-serif;font-size:10px;font-weight:600;color:#aaa;letter-spacing:.25em;text-transform:uppercase}
 .logo-main{font-family:'Oswald',sans-serif;font-size:19px;font-weight:700;color:var(--green);letter-spacing:.02em;text-transform:uppercase}
 .header-nav{display:flex;align-items:center;gap:4px}
-.header-nav a{font-size:13px;font-weight:500;color:#ccc;text-decoration:none;padding:7px 13px;border-radius:6px;transition:.2s}
+.header-nav a{font-size:13px;font-weight:500;color:#ccc;text-decoration:none;padding:7px 13px;border-radius:0;transition:.2s}
 .header-nav a:hover{color:var(--green)}
-.cart-btn{position:relative;background:var(--green);color:var(--black);border:none;border-radius:8px;padding:10px 18px;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center;gap:8px;transition:.2s}
+.cart-btn{position:relative;background:var(--green);color:var(--black);border:none;border-radius:0;padding:10px 18px;font-family:'Oswald',sans-serif;font-size:14px;font-weight:600;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center;gap:8px;transition:.2s}
 .cart-btn:hover{background:#7dd400}
-.cart-count{background:var(--black);color:var(--green);border-radius:50%;width:20px;height:20px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;min-width:20px}
+.cart-count{background:var(--black);color:var(--green);border-radius:0;width:20px;height:20px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;min-width:20px}
 .shop-wrap{max-width:1400px;margin:0 auto;padding:32px 24px;display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start}
-.sidebar{background:var(--white);border-radius:14px;border:1px solid var(--gray-200);overflow:hidden;position:sticky;top:90px}
+.sidebar{background:var(--white);border-radius:0;border:1px solid var(--gray-200);overflow:hidden;position:sticky;top:90px}
 .sidebar-header{background:var(--black);padding:18px 20px}
 .sidebar-header h2{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.06em}
 .sidebar-body{padding:20px}
 .filter-group{margin-bottom:24px}
 .filter-group:last-child{margin-bottom:0}
 .filter-label{font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;display:block}
-.category-btn{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:1px solid var(--gray-200);border-radius:8px;padding:10px 14px;font-size:13px;font-weight:500;color:var(--text);cursor:pointer;margin-bottom:6px;transition:.2s;text-align:left}
+.category-btn{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:1px solid var(--gray-200);border-radius:0;padding:10px 14px;font-size:13px;font-weight:500;color:var(--text);cursor:pointer;margin-bottom:6px;transition:.2s;text-align:left}
 .category-btn:hover,.category-btn.active{border-color:var(--green);background:rgba(110,193,0,.08);color:var(--green-dark)}
-.category-btn .cat-count{font-size:11px;background:var(--gray-100);border-radius:12px;padding:2px 8px;color:var(--text-muted)}
+.category-btn .cat-count{font-size:11px;background:var(--gray-100);border-radius:0;padding:2px 8px;color:var(--text-muted)}
 .category-btn.active .cat-count{background:rgba(110,193,0,.2);color:var(--green-dark)}
-.search-input{width:100%;padding:10px 14px;border:1px solid var(--gray-200);border-radius:8px;font-size:13px;font-family:'Inter',sans-serif;transition:.2s;outline:none}
+.search-input{width:100%;padding:10px 14px;border:1px solid var(--gray-200);border-radius:0;font-size:13px;font-family:'Inter',sans-serif;transition:.2s;outline:none}
 .search-input:focus{border-color:var(--green)}
 .clear-btn{background:none;border:none;color:var(--text-muted);font-size:12px;cursor:pointer;padding:4px 0;text-decoration:underline;margin-top:8px}
 .clear-btn:hover{color:var(--green-dark)}
-.shop-toolbar{background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap}
+.shop-toolbar{background:var(--white);border:1px solid var(--gray-200);border-radius:0;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap}
 .results-count{font-size:14px;color:var(--text-muted)}
 .results-count strong{color:var(--text);font-weight:600}
-.sort-select{padding:8px 14px;border:1px solid var(--gray-200);border-radius:8px;font-size:13px;font-family:'Inter',sans-serif;background:var(--white);cursor:pointer;outline:none}
+.sort-select{padding:8px 14px;border:1px solid var(--gray-200);border-radius:0;font-size:13px;font-family:'Inter',sans-serif;background:var(--white);cursor:pointer;outline:none}
 .sort-select:focus{border-color:var(--green)}
 .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
-.product-card{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+.product-card{background:var(--white);border:1px solid var(--gray-200);border-radius:0;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
 .product-card:hover{border-color:var(--green);box-shadow:0 8px 28px rgba(110,193,0,.12);transform:translateY(-3px)}
 .product-img-wrap{width:100%;aspect-ratio:1;overflow:hidden;background:var(--gray-100);border-bottom:1px solid var(--gray-100);position:relative;flex-shrink:0}
 .product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
@@ -60,13 +70,13 @@ header{background:var(--black);border-bottom:3px solid var(--green);position:sti
 .product-name{font-family:'Oswald',sans-serif;font-size:16px;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.3;flex:1}
 .product-price{font-size:17px;font-weight:700;color:var(--text);margin:10px 0 14px}
 .product-price span{font-size:12px;color:var(--text-muted);font-weight:400}
-.add-btn{background:var(--green);color:var(--black);border:none;border-radius:8px;padding:11px;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;cursor:pointer;width:100%;transition:.2s;text-transform:uppercase}
+.add-btn{background:var(--green);color:var(--black);border:none;border-radius:0;padding:11px;font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;cursor:pointer;width:100%;transition:.2s;text-transform:uppercase}
 .add-btn:hover{background:#7dd400}
-.qty-control{display:flex;align-items:center;border:1px solid var(--gray-200);border-radius:8px;overflow:hidden}
+.qty-control{display:flex;align-items:center;border:1px solid var(--gray-200);border-radius:0;overflow:hidden}
 .qty-btn{background:var(--gray-100);border:none;width:38px;height:38px;font-size:18px;cursor:pointer;font-weight:600;transition:.2s;flex-shrink:0}
 .qty-btn:hover{background:var(--green);color:var(--black)}
 .qty-num{flex:1;text-align:center;font-size:14px;font-weight:600;padding:8px 4px;background:var(--white)}
-.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:20px;margin-bottom:8px}
+.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:0;margin-bottom:8px}
 .badge-new{background:rgba(110,193,0,.15);color:var(--green-dark)}
 .badge-sale{background:rgba(220,50,30,.12);color:#c0280a}
 .cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;opacity:0;pointer-events:none;transition:.3s}
@@ -75,13 +85,13 @@ header{background:var(--black);border-bottom:3px solid var(--green);position:sti
 .cart-drawer.open{transform:translateX(0)}
 .cart-head{background:var(--black);padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--green)}
 .cart-head h2{font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:.04em}
-.cart-close{background:none;border:1px solid #444;color:var(--white);width:34px;height:34px;border-radius:6px;cursor:pointer;font-size:16px}
+.cart-close{background:none;border:1px solid #444;color:var(--white);width:34px;height:34px;border-radius:0;cursor:pointer;font-size:16px}
 .cart-close:hover{border-color:var(--green);color:var(--green)}
 .cart-items{flex:1;overflow-y:auto;padding:16px}
 .cart-empty{text-align:center;padding:60px 20px;color:var(--text-muted)}
 .cart-empty .empty-icon{font-size:56px;margin-bottom:16px}
 .cart-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--gray-100);align-items:flex-start}
-.cart-item-img{width:64px;height:64px;border-radius:8px;object-fit:cover;background:var(--gray-100);flex-shrink:0;border:1px solid var(--gray-200);overflow:hidden}
+.cart-item-img{width:64px;height:64px;border-radius:0;object-fit:cover;background:var(--gray-100);flex-shrink:0;border:1px solid var(--gray-200);overflow:hidden}
 .cart-item-img img{width:100%;height:100%;object-fit:cover}
 .cart-item-img .ci-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:26px}
 .cart-item-info{flex:1;min-width:0}
@@ -89,7 +99,7 @@ header{background:var(--black);border-bottom:3px solid var(--green);position:sti
 .cart-item-cat{font-size:11px;color:var(--text-muted);margin-bottom:8px}
 .cart-item-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .cart-item-price{font-size:15px;font-weight:700;color:var(--text)}
-.cart-item-qty{display:flex;align-items:center;border:1px solid var(--gray-200);border-radius:6px;overflow:hidden}
+.cart-item-qty{display:flex;align-items:center;border:1px solid var(--gray-200);border-radius:0;overflow:hidden}
 .cqty-btn{background:var(--gray-100);border:none;width:28px;height:28px;font-size:14px;cursor:pointer;font-weight:600;transition:.2s}
 .cqty-btn:hover{background:var(--green);color:var(--black)}
 .cqty-num{width:32px;text-align:center;font-size:13px;font-weight:600;padding:4px}
@@ -99,15 +109,15 @@ header{background:var(--black);border-bottom:3px solid var(--green);position:sti
 .cart-subtotal{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .cart-subtotal span{font-size:14px;color:var(--text-muted)}
 .cart-subtotal strong{font-size:20px;font-weight:700;color:var(--text)}
-.cart-note{font-size:12px;color:var(--text-muted);margin-bottom:16px;line-height:1.5;background:rgba(110,193,0,.08);border-radius:8px;padding:10px 12px;border-left:3px solid var(--green)}
-.checkout-btn{background:var(--green);color:var(--black);border:none;border-radius:10px;padding:16px;font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;letter-spacing:.06em;cursor:pointer;width:100%;text-transform:uppercase;transition:.2s;margin-bottom:8px}
+.cart-note{font-size:12px;color:var(--text-muted);margin-bottom:16px;line-height:1.5;background:rgba(110,193,0,.08);border-radius:0;padding:10px 12px;border-left:3px solid var(--green)}
+.checkout-btn{background:var(--green);color:var(--black);border:none;border-radius:0;padding:16px;font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;letter-spacing:.06em;cursor:pointer;width:100%;text-transform:uppercase;transition:.2s;margin-bottom:8px;text-align:center;text-decoration:none;display:block;box-sizing:border-box}
 .checkout-btn:hover{background:#7dd400}
-.continue-btn{background:none;border:1px solid var(--gray-200);border-radius:10px;padding:12px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;width:100%;transition:.2s;color:var(--text)}
+.continue-btn{background:none;border:1px solid var(--gray-200);border-radius:0;padding:12px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;width:100%;transition:.2s;color:var(--text)}
 .continue-btn:hover{border-color:var(--green);color:var(--green-dark)}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--black);color:var(--white);padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;z-index:400;transition:.3s;border-left:4px solid var(--green);white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--black);color:var(--white);padding:12px 24px;border-radius:0;font-size:14px;font-weight:500;z-index:400;transition:.3s;border-left:4px solid var(--green);white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,.3)}
 .toast.show{transform:translateX(-50%) translateY(0)}
 .pagination{display:flex;justify-content:center;gap:8px;margin-top:32px}
-.page-btn{background:var(--white);border:1px solid var(--gray-200);border-radius:8px;width:40px;height:40px;font-size:14px;font-weight:500;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
+.page-btn{background:var(--white);border:1px solid var(--gray-200);border-radius:0;width:40px;height:40px;font-size:14px;font-weight:500;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center}
 .page-btn:hover,.page-btn.active{background:var(--green);border-color:var(--green);color:var(--black);font-weight:700}
 .no-results{text-align:center;padding:80px 20px;color:var(--text-muted);grid-column:1/-1}
 @media(max-width:900px){.shop-wrap{grid-template-columns:1fr}.sidebar{position:static}.cart-drawer{width:100%;max-width:420px}}
@@ -116,22 +126,32 @@ header{background:var(--black);border-bottom:3px solid var(--green);position:sti
 </head>
 <body>
 
-<div class="toast" id="toast"></div>
+<!-- Icon sprite (Lucide-style) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  </defs>
+</svg>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-<div class="cart-drawer" id="cartDrawer">
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle" aria-hidden="true">
   <div class="cart-head">
-    <h2>🛒 Your Cart</h2>
-    <button class="cart-close" onclick="closeCart()">✕</button>
+    <h2 id="cartDrawerTitle"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"/></svg> Your Shopping List</h2>
+    <button class="cart-close" type="button" onclick="closeCart()" aria-label="Close shopping list"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"/></svg></button>
   </div>
   <div class="cart-items" id="cartItems"></div>
   <div class="cart-foot" id="cartFoot" style="display:none">
     <div class="cart-subtotal">
-      <span>Subtotal</span>
+      <span>Estimated total</span>
       <strong id="cartTotal">$0.00</strong>
     </div>
-    <div class="cart-note">📞 This is a demo store. To place a real order call us at <strong>(587) 707-1973</strong> or visit 40 Belmont Drive SW, Unit 630, Calgary AB.</div>
-    <button class="checkout-btn" onclick="showToast('📞 Please call (587) 707-1973 to place your order!')">Call to Order</button>
-    <button class="continue-btn" onclick="closeCart()">Continue Shopping</button>
+    <div class="cart-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg> Call <strong>(587) 707-1973</strong> to confirm availability before pickup at <strong>40 Belmont Drive SW, Unit 630, Calgary AB</strong>. Prices may vary in-store.</div>
+    <a class="checkout-btn" href="tel:5877071973">Call to Reserve</a>
+    <button class="continue-btn" type="button" onclick="closeCart()">Keep Browsing</button>
   </div>
 </div>
 
@@ -146,15 +166,15 @@ header{background:var(--black);border-bottom:3px solid var(--green);position:sti
       <a href="index.html#about">About</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <button class="cart-btn" onclick="openCart()">
-      🛒 Cart <span class="cart-count" id="cartCount">0</span>
+    <button class="cart-btn" type="button" onclick="openCart()" aria-label="Open shopping list">
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cart"/></svg> List <span class="cart-count" id="cartCount" aria-label="0 items">0</span>
     </button>
   </div>
 </header>
 
 <div class="shop-wrap">
   <aside class="sidebar">
-    <div class="sidebar-header"><h2>🔍 Filter Products</h2></div>
+    <div class="sidebar-header"><h2><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"/></svg> Filter Products</h2></div>
     <div class="sidebar-body">
       <div class="filter-group">
         <span class="filter-label">Search</span>
@@ -188,73 +208,20 @@ header{background:var(--black);border-bottom:3px solid var(--green);position:sti
   </div>
 </div>
 
+<script src="products.js"></script>
+<script src="cart.js"></script>
 <script>
-const BASE = 'https://pattyafoods.com/wp-content/uploads/';
+/* PRODUCTS and CATS now live in products.js */
 
-const PRODUCTS = [
-  // CONDIMENTS
-  {id:1,  name:"Ogbono (200g)",               cat:"Condiment",       price:5.00,  img:BASE+'2026/01/ogbono.jpg',                              badge:""},
-  {id:2,  name:"Periwinkle (200g)",            cat:"Condiment",       price:5.99,  img:BASE+'2025/04/periwinkle.jpg',                          badge:""},
-  {id:3,  name:"Ugba – African Oil Bean (200g)",cat:"Condiment",      price:5.99,  img:BASE+'2026/01/Ugba.webp',                               badge:""},
-  {id:4,  name:"Egusi Ground (400g)",          cat:"Condiment",       price:8.99,  img:BASE+'2025/04/egusi-ground.jpg',                        badge:"",  emoji:"🌿"},
-  {id:5,  name:"Crayfish Ground (100g)",       cat:"Condiment",       price:4.99,  img:BASE+'2025/04/crayfish.jpg',                            badge:"",  emoji:"🦐"},
-  {id:6,  name:"Palm Oil (1L)",               cat:"Condiment",       price:9.99,  img:BASE+'2025/04/palm-oil.jpg',                            badge:"",  emoji:"🛢️"},
-  // FLOUR & GRAINS
-  {id:7,  name:"Ayoola Beans Flour (2lb)",     cat:"Flour & Grains",  price:10.99, img:BASE+'2026/01/ayoola-1.jpg',                            badge:""},
-  {id:8,  name:"Ayoola Cassava Fufu (2lb)",    cat:"Flour & Grains",  price:10.99, img:BASE+'2025/04/1727463258740-1024x1024.jpg',             badge:""},
-  {id:9,  name:"Ayoola Poundo Yam (2lb)",      cat:"Flour & Grains",  price:10.99, img:BASE+'2025/04/PoundoYam1kg_-600x600-1.jpg',             badge:""},
-  {id:10, name:"Garri Ijebu (2kg)",            cat:"Flour & Grains",  price:9.49,  img:BASE+'2025/04/garri.jpg',                               badge:"",  emoji:"🌽"},
-  {id:11, name:"Semovita (2kg)",               cat:"Flour & Grains",  price:11.99, img:BASE+'2025/04/semovita.jpg',                            badge:"",  emoji:"🌾"},
-  {id:12, name:"Plantain Flour (1.5kg)",       cat:"Flour & Grains",  price:12.99, img:BASE+'2025/04/plantain-flour.jpg',                      badge:"new",emoji:"🍌"},
-  // MEAT & FISH
-  {id:13, name:"Chicken Gizzard (5kg)",        cat:"Meat & Fish",     price:38.00, img:BASE+'2025/04/gizzard-3.jpg',                           badge:""},
-  {id:14, name:"Beef (2lb)",                   cat:"Meat & Fish",     price:14.00, img:BASE+'2025/04/goat-meat-1024x575.jpeg',                 badge:""},
-  {id:15, name:"Bone-in Stockfish Bits",       cat:"Meat & Fish",     price:15.00, img:BASE+'2025/08/merex-bone-in-stockfish-bits.jpg',        badge:""},
-  {id:16, name:"Boneless Stockfish Bits",      cat:"Meat & Fish",     price:15.00, img:BASE+'2025/08/Merex-Bone-in-StockFish-Bits-300x300-1.jpg',badge:""},
-  {id:17, name:"Chicken Breast (5kg)",         cat:"Meat & Fish",     price:34.99, img:BASE+'2025/04/breast.jpg',                              badge:"sale"},
-  {id:18, name:"Smoked Catfish",              cat:"Meat & Fish",     price:14.99, img:BASE+'2025/04/catfish.jpg',                             badge:"",  emoji:"🐟"},
-  // VEGETABLES
-  {id:19, name:"Frozen Spinach (1kg)",         cat:"Vegetables",      price:5.99,  img:BASE+'2026/01/spinach.jpg',                             badge:"sale"},
-  {id:20, name:"Bitter Leaf (dried 100g)",     cat:"Vegetables",      price:4.49,  img:BASE+'2025/04/bitter-leaf.jpg',                         badge:"",  emoji:"🌿"},
-  {id:21, name:"Okra (frozen 500g)",           cat:"Vegetables",      price:6.49,  img:BASE+'2025/04/okra.jpg',                                badge:"",  emoji:"🌱"},
-  {id:22, name:"African Eggplant (5 pcs)",     cat:"Vegetables",      price:5.99,  img:BASE+'2025/04/african-eggplant.jpg',                    badge:"",  emoji:"🍆"},
-  // TUBERS
-  {id:23, name:"Yam (whole ~3kg)",             cat:"Tubers",          price:16.99, img:BASE+'2025/04/yam.jpg',                                 badge:"",  emoji:"🍠"},
-  {id:24, name:"Sweet Potato (2kg)",           cat:"Tubers",          price:7.99,  img:BASE+'2025/04/sweet-potato.jpg',                        badge:"",  emoji:"🍠"},
-  {id:25, name:"Cassava (fresh 2kg)",          cat:"Tubers",          price:8.49,  img:BASE+'2025/04/cassava.jpg',                             badge:"",  emoji:"🌿"},
-  // SNACKS & DRINKS
-  {id:26, name:"African Prune / Ube",          cat:"Snacks & Drinks", price:10.99, img:BASE+'2025/04/Prune-scaled-1-768x1024.jpg',             badge:""},
-  {id:27, name:"Aiy's Plate Chinchin",         cat:"Snacks & Drinks", price:5.00,  img:BASE+'2025/12/chin-chin-recipe-recipe-main-photo.jpg',  badge:""},
-  {id:28, name:"Prawn Crackers (227g)",        cat:"Snacks & Drinks", price:4.99,  img:BASE+'2025/10/prawn-crackers-1024x768.jpg',             badge:""},
-  {id:29, name:"Alomo Bitters (small)",        cat:"Snacks & Drinks", price:10.99, img:BASE+'2025/04/Alomo-1.jpg',                             badge:""},
-  {id:30, name:"Aiy's Plate Moi Moi",         cat:"Snacks & Drinks", price:5.00,  img:BASE+'2025/10/OIP-4.webp',                              badge:"new"},
-  {id:31, name:"Malta Guinness (6-pack)",      cat:"Snacks & Drinks", price:11.99, img:BASE+'2025/04/malta.jpg',                               badge:"",  emoji:"🍺"},
-  {id:32, name:"Plantain Chips (200g)",        cat:"Snacks & Drinks", price:4.99,  img:BASE+'2025/04/plantain-chips.jpg',                      badge:"",  emoji:"🍌"},
-  // BREAKFAST & CEREAL
-  {id:33, name:"Arla Dano Milk (800g)",        cat:"Breakfast & Cereal",price:26.73,img:BASE+'2025/04/images-5.jpg',                           badge:""},
-  {id:34, name:"Oats (1kg)",                   cat:"Breakfast & Cereal",price:6.49, img:BASE+'2025/04/oats.jpg',                               badge:"",  emoji:"🥣"},
-  {id:35, name:"Akamu / Ogi Mix (500g)",       cat:"Breakfast & Cereal",price:5.99, img:BASE+'2025/04/akamu.jpg',                              badge:"",  emoji:"🥣"},
-  // FASHION & BEAUTY
-  {id:36, name:"Soul Mate Hair Cream (300g)",  cat:"Fashion & Beauty",price:5.99,  img:BASE+'2025/10/soul-mate-hair-cream.webp',               badge:""},
-  {id:37, name:"Apple Hair Cream",             cat:"Fashion & Beauty",price:5.99,  img:BASE+'2025/10/apple-hair-cream-green.png',              badge:""},
-  {id:38, name:"Shea Butter (pure 250g)",      cat:"Fashion & Beauty",price:12.99, img:BASE+'2025/04/shea-butter.jpg',                        badge:"new",emoji:"🧴"},
-  // PANTRY
-  {id:39, name:"Tomato Paste (400g)",          cat:"Pantry",          price:3.49,  img:BASE+'2025/04/tomato-paste.jpg',                        badge:"",  emoji:"🍅"},
-  {id:40, name:"Maggi Cubes (100pcs)",         cat:"Pantry",          price:5.99,  img:BASE+'2025/04/maggi.jpg',                               badge:"",  emoji:"🧂"},
-  {id:41, name:"Scotch Bonnet Pepper (jar)",   cat:"Pantry",          price:7.99,  img:BASE+'2025/04/scotch-bonnet.jpg',                       badge:"",  emoji:"🌶️"},
-  {id:42, name:"Coconut Oil (500ml)",          cat:"Pantry",          price:11.99, img:BASE+'2025/04/coconut-oil.jpg',                         badge:"",  emoji:"🥥"},
-  {id:43, name:"Ackee (canned 540ml)",         cat:"Pantry",          price:9.99,  img:BASE+'2025/04/ackee.jpg',                               badge:"",  emoji:"🥫"},
-  {id:44, name:"Jerk Seasoning (300g)",        cat:"Pantry",          price:8.49,  img:BASE+'2025/04/jerk-seasoning.jpg',                      badge:"new",emoji:"🌶️"},
-];
-
-const CATS = [...new Set(PRODUCTS.map(p=>p.cat))];
-let cart={}, activeCategory="All", currentPage=1;
-const PER_PAGE=12;
+let cart = Cart.get();
+let activeCategory = "All", currentPage = 1;
+const PER_PAGE = 12;
+Cart.subscribe(c => { cart = c; updateCartUI(); });
 
 function imgTag(p, cls=''){
   return `<img src="${p.img}" alt="${p.name}" class="${cls}" loading="lazy"
     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="img-fallback" style="display:none">${p.emoji||'🛒'}</div>`;
+    <div class="img-fallback" style="display:none" aria-hidden="true">${p.emoji||'🛒'}</div>`;
 }
 
 function buildFilters(){
@@ -310,7 +277,7 @@ function renderProducts(products){
   const start=(currentPage-1)*PER_PAGE;
   const page=products.slice(start,start+PER_PAGE);
   if(!page.length){
-    grid.innerHTML=`<div class="no-results"><div style="font-size:64px;margin-bottom:16px">🔍</div><p>No products found.<br>Try a different search or category.</p></div>`;
+    grid.innerHTML=`<div class="no-results"><div style="font-size:64px;margin-bottom:16px" aria-hidden="true">🔍</div><p>No products found.<br>Try a different search or category.</p></div>`;
     document.getElementById('pagination').innerHTML='';
     return;
   }
@@ -330,7 +297,7 @@ function renderProducts(products){
               <div class="qty-num" id="qty-${p.id}">${cart[p.id].qty}</div>
               <button class="qty-btn" onclick="changeQty(${p.id},1)">+</button>
             </div>`
-          :`<button class="add-btn" onclick="addToCart(${p.id})">+ Add to Cart</button>`
+          :`<button class="add-btn" onclick="addToCart(${p.id})">+ Add to List</button>`
         }
       </div>
     </div>`;
@@ -344,32 +311,27 @@ function renderProducts(products){
 function goPage(p){currentPage=p;applyFilters();window.scrollTo({top:0,behavior:'smooth'});}
 
 function addToCart(id){
-  const p=PRODUCTS.find(x=>x.id===id);
-  if(!cart[id]) cart[id]={...p,qty:0};
-  cart[id].qty++;
-  updateCartUI();
-  showToast(`✅ ${p.name} added to cart!`);
+  const p = PRODUCTS.find(x => x.id === id);
+  Cart.add(id);
+  showToast(`${p.name} added to your list`);
   applyFilters();
 }
 
-function changeQty(id,delta){
-  if(!cart[id]) return;
-  cart[id].qty+=delta;
-  if(cart[id].qty<=0) delete cart[id];
-  updateCartUI();
+function changeQty(id, delta){
+  Cart.changeQty(id, delta);
   applyFilters();
 }
 
 function removeFromCart(id){
-  delete cart[id];
-  updateCartUI();
-  renderCartDrawer();
+  Cart.remove(id);
   applyFilters();
 }
 
 function updateCartUI(){
-  const total=Object.values(cart).reduce((s,i)=>s+i.qty,0);
-  document.getElementById('cartCount').textContent=total;
+  const total = Cart.count();
+  const el = document.getElementById('cartCount');
+  el.textContent = total;
+  el.setAttribute('aria-label', `${total} item${total === 1 ? '' : 's'}`);
   renderCartDrawer();
 }
 
@@ -378,7 +340,7 @@ function renderCartDrawer(){
   const el=document.getElementById('cartItems');
   const foot=document.getElementById('cartFoot');
   if(!items.length){
-    el.innerHTML=`<div class="cart-empty"><div class="empty-icon">🛒</div><p>Your cart is empty.<br>Add some products!</p></div>`;
+    el.innerHTML=`<div class="cart-empty"><div class="empty-icon" aria-hidden="true">🛒</div><p>Your shopping list is empty.<br>Browse the aisles and add what you need.</p></div>`;
     foot.style.display='none';
     return;
   }
@@ -388,7 +350,7 @@ function renderCartDrawer(){
       <div class="cart-item-img">
         <img src="${item.img}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-        <div class="ci-fallback" style="display:none">${item.emoji||'🛒'}</div>
+        <div class="ci-fallback" style="display:none" aria-hidden="true">${item.emoji||'🛒'}</div>
       </div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.name}</div>
@@ -408,16 +370,26 @@ function renderCartDrawer(){
   document.getElementById('cartTotal').textContent='$'+subtotal.toFixed(2);
 }
 
-function changeQtyCart(id,delta){
-  if(!cart[id]) return;
-  cart[id].qty+=delta;
-  if(cart[id].qty<=0) delete cart[id];
-  updateCartUI();
+function changeQtyCart(id, delta){
+  Cart.changeQty(id, delta);
   applyFilters();
 }
 
-function openCart(){document.getElementById('cartDrawer').classList.add('open');document.getElementById('cartOverlay').classList.add('open');}
-function closeCart(){document.getElementById('cartDrawer').classList.remove('open');document.getElementById('cartOverlay').classList.remove('open');}
+function openCart(){
+  const d=document.getElementById('cartDrawer');
+  d.classList.add('open');d.setAttribute('aria-hidden','false');
+  document.getElementById('cartOverlay').classList.add('open');
+  const close=d.querySelector('.cart-close');if(close)close.focus();
+}
+function closeCart(){
+  const d=document.getElementById('cartDrawer');
+  d.classList.remove('open');d.setAttribute('aria-hidden','true');
+  document.getElementById('cartOverlay').classList.remove('open');
+  const trigger=document.querySelector('.cart-btn');if(trigger)trigger.focus();
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&document.getElementById('cartDrawer').classList.contains('open'))closeCart();
+});
 
 let toastTimer;
 function showToast(msg){
@@ -429,7 +401,23 @@ function showToast(msg){
 
 buildFilters();
 applyFilters();
-renderCartDrawer();
+updateCartUI();
+
+// Deep-link: ?cat=Category+Name or ?q=search
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('cat');
+  const q = params.get('q');
+  if (cat) {
+    const btn = document.querySelector(`[data-cat="${CSS.escape(cat)}"]`);
+    if (btn) { activeCategory = cat; document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
+  }
+  if (q) {
+    document.getElementById('searchInput').value = q;
+  }
+  if (cat || q) applyFilters();
+  if (params.get('openCart') === '1') openCart();
+})();
 </script>
 </body>
 </html>

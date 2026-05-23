@@ -1,0 +1,6 @@
+# Master image sources kept locally (not needed for the site)
+images/*.orig
+
+# Orphan image variants no longer referenced
+images/hero-bg.*
+images/storefront-large.jpg
